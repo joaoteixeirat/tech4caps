@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import HeartButton from './Buttons/HeartButton';
+import Link from './Link';
+import CartButton from './Buttons/CartButton';
 
 const HeaderStyled = styled.header`
 
@@ -10,14 +13,60 @@ const HeaderStyled = styled.header`
   box-shadow: 2px 2px 4px rgba(22, 21, 21, 1);
   background-color: rgb(22, 19, 20);
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+`
+
+const ContainerLink = styled.div`
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  width: 30%;
+  height: 100%;
+`
+
+const ContainerButtons = styled.div`
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+`
+
+const Title = styled.h1`
+
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 0;
 `
 
 const Header = (props) => {
 
-  return(
+  return (
 
     <HeaderStyled>
-      <h1>tech4caps</h1>
+      
+      <ContainerLink>
+        <Link href={'#'} title={'Newsletter'} />
+        <Link href={'#'} title={'Contato'} />
+        <Link href={'#'} title={'Sobre'} />
+      </ContainerLink>
+
+      <Title>tech4caps</Title>
+
+      <ContainerButtons>
+        <HeartButton />
+        <CartButton />
+      </ContainerButtons>
+
     </HeaderStyled>
   );
 };

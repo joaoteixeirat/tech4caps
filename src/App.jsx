@@ -1,6 +1,6 @@
 import Header from "./assets/Components/Header"
 import Banner from "./assets/Components/Banner"
-import Button from "./assets/Components/Button"
+import VitrineButton from "./assets/Components/Buttons/VitrineButton"
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <Header />
       <Banner>
-        <Button text={'vitrine →'}/>
+        <VitrineButton text={'vitrine →'}/>
       </Banner>
     </>
   )

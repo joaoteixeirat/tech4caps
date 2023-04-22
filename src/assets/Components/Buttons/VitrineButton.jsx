@@ -43,7 +43,7 @@ const Span = styled.span`
   }
 `
 
-const Button = ({text}) => {
+const VitrineButton = ({text}) => {
 
   return(
 
@@ -55,4 +55,4 @@ const Button = ({text}) => {
   );
 };
 
-export default Button;
+export default VitrineButton;
