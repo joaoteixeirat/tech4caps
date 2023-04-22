@@ -4,3 +4,8 @@
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 }
+
+body{
+
+  overflow-x: hidden;
+}

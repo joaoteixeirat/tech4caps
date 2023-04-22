@@ -43,11 +43,11 @@ const Span = styled.span`
   }
 `
 
-const VitrineButton = ({text}) => {
+const VitrineButton = ({text, onClick}) => {
 
   return(
 
-    <ButtonStyled>
+    <ButtonStyled onClick={onClick}>
       <Span>
         {text}
       </Span>
