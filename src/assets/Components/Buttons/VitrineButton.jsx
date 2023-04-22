@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const ButtonStyled = styled.div.attrs({role : 'button'})`
+const ButtonStyled = styled.div.attrs({ role: 'button' })`
 
   width: 200px;
   height: 50px;
@@ -27,8 +28,10 @@ const ButtonStyled = styled.div.attrs({role : 'button'})`
   }
 `
 
-const Span = styled.span`
+const StyledLink = styled(Link)`
 
+  text-decoration: none;
+  color: white;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -43,14 +46,14 @@ const Span = styled.span`
   }
 `
 
-const VitrineButton = ({text, onClick}) => {
+const VitrineButton = ({ text, onClick }) => {
 
-  return(
+  return (
 
     <ButtonStyled onClick={onClick}>
-      <Span>
+      <StyledLink to={'/vitrine'}>
         {text}
-      </Span>
+      </StyledLink>
     </ButtonStyled>
   );
 };
