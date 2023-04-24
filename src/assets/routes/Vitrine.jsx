@@ -47,23 +47,41 @@ function Vitrine() {
     }
   ]
 
-  const StyledDiv = styled.div`
+  const CardsContainer = styled.div`
   
     width: 100%;
+    max-width: 1180px;
     height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    padding: 40px;
-    overflow-y: scroll;    
+    padding: 0 40px 40px 40px;
+    overflow-y: auto;
+    
+    &::-webkit-scrollbar{
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track{
+
+      background: #747474;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+
+      background: #eeeeee;
+      border-radius: 5px;
+    }
   `
 
   return (
   
     <VitrineSection>
-      <StyledDiv>
+
+      <CardsContainer>
         {
           products.map((product,index) => (
 
@@ -76,7 +94,7 @@ function Vitrine() {
             />
           ))
         }
-      </StyledDiv>
+      </CardsContainer>
     </VitrineSection>
   )
 }
