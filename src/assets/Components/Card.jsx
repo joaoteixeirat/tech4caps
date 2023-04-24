@@ -54,7 +54,7 @@ const StyledCard = styled.div`
   }
 `
 
-const Card = ({ imageURL, description, price, delayToAppear }) => {
+const Card = ({ imageURL, title, price, delayToAppear }) => {
 
   return (
 
@@ -63,7 +63,7 @@ const Card = ({ imageURL, description, price, delayToAppear }) => {
       <img src={imageURL} />
 
       <section>
-        <p>{description}</p>
+        <p>{title}</p>
         <span>R$ {price}</span>
       </section>
 
