@@ -6,7 +6,7 @@ const SectionStyled = styled.section`
   height: calc(100vh - 100px);
   background-color: rgba(22, 21, 21, 1);
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
 `
 
