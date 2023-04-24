@@ -40,7 +40,7 @@ const StyledLink = styled(Link)`
   display: grid;
   place-items: center;
   transition: color 0.4s ease;
-  
+  font-family: 'Courier New', Courier, monospace;
   &:hover{
     color: black;
   }

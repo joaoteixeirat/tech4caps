@@ -28,6 +28,7 @@ const ContainerLink = styled.div`
   gap: 30px;
   width: 30%;
   height: 100%;
+  font-family: 'Courier New', Courier, monospace;
 `
 
 const ContainerButtons = styled.div`
@@ -46,6 +47,7 @@ const Title = styled.h1`
   left: 0;
   text-align: center;
   z-index: 0;
+  font-family: 'Courier New', Courier, monospace;
 `
 
 const Header = (props) => {

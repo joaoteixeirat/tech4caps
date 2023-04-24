@@ -22,6 +22,8 @@ const StyledCard = styled.div`
   transition: all 0.5s;
   animation: ${toAppear} 0.3s;
   animation-duration: ${props => props.$delay}ms;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 
   &:hover{
     transform: scale(1.02);

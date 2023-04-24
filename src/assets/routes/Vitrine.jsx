@@ -7,43 +7,43 @@ function Vitrine() {
   const products = [
     {
       url: 'https://img.lojasrenner.com.br/item/670277658/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Aba Curva Em Algodão Com Cordão E Patch De Coqueiro Branco',
+      price: '39.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/675671371/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Bone Em Algodão Com Bordado Coqueiro Bege',
+      price: '79.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/792046161/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Aba Reta Felpudo Com Five Panel E Etiqueta Frontal Preto',
+      price: '79.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/601842844/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Aba Curva Em Suedine 6 Panel Rosa Claro',
+      price: '59.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/670266721/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Aba Curva Em Algodão Com Estampa De Ursinhos Bege',
+      price: '59.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/673250291/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Aba Curva Em Algodão Com Bordado Summer Vacation Off White',
+      price: '69.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/625200521/large/1.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Com Aba Curva E Estampa Refletiva Em Lettering Do Not Give Up Preto',
+      price: '59.90'
     },
     {
       url: 'https://img.lojasrenner.com.br/item/817849560/large/3.jpg',
-      description: 'babababababababab asgldglasdga ajhgd askghjdlkasd',
-      price: '29.00'
+      description: 'Boné Aba Curva Em Sarja Com 06 Panel E Bordado NY Bege',
+      price: '69.90'
     }
   ]
 
