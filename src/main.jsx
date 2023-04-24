@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './assets/routes/App'
 import Home from './assets/routes/Home'
 import Vitrine from './assets/routes/Vitrine'
 import './index.css'
@@ -9,8 +10,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <App />,
     children: [
+      {
+        path: '/',
+        element: <Home />
+      },
       {
         path: '/vitrine',
         element: <Vitrine />

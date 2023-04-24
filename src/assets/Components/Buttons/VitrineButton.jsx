@@ -46,12 +46,12 @@ const StyledLink = styled(Link)`
   }
 `
 
-const VitrineButton = ({ text, onClick }) => {
+const VitrineButton = ({ text, to }) => {
 
   return (
 
-    <ButtonStyled onClick={onClick}>
-      <StyledLink to={'/vitrine'}>
+    <ButtonStyled>
+      <StyledLink to={to}>
         {text}
       </StyledLink>
     </ButtonStyled>

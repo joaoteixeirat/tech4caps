@@ -1,4 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const toAppear = keyframes`
+
+  0%{
+    transform: scale(0);
+  }
+`
 
 const StyledCard = styled.div`
 
@@ -11,8 +18,10 @@ const StyledCard = styled.div`
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-  transition: all 0.5s;
   cursor: pointer;
+  transition: all 0.5s;
+  animation: ${toAppear} 0.3s;
+  animation-duration: ${props => props.$delay}ms;
 
   &:hover{
     transform: scale(1.02);
@@ -43,11 +52,11 @@ const StyledCard = styled.div`
   }
 `
 
-const Card = ({ imageURL, description, price }) => {
+const Card = ({ imageURL, description, price, delayToAppear }) => {
 
   return (
 
-    <StyledCard>
+    <StyledCard $delay={delayToAppear}>
       
       <img src={imageURL} />
 

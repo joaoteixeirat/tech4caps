@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "../Components/Card";
+import VitrineSection from "../Components/VitrineSection";
 
 function Vitrine() {
 
@@ -60,19 +61,23 @@ function Vitrine() {
   `
 
   return (
-    <StyledDiv>
-      {
-        products.map((product) => (
+  
+    <VitrineSection>
+      <StyledDiv>
+        {
+          products.map((product,index) => (
 
-          <Card
-            key={product.url}
-            imageURL={product.url}
-            description={product.description}
-            price={product.price}
-          />
-        ))
-      }
-    </StyledDiv>
+            <Card
+              key={product.url}
+              imageURL={product.url}
+              description={product.description}
+              price={product.price}
+              delayToAppear={(index + 1) * 120}
+            />
+          ))
+        }
+      </StyledDiv>
+    </VitrineSection>
   )
 }
 
