@@ -6,6 +6,7 @@ import Vitrine from './assets/routes/Vitrine'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Detalhes from './assets/routes/Detalhes'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/vitrine',
         element: <Vitrine />
+      },
+      {
+        path: '/detalhes',
+        element: <Detalhes />
       }
     ]
   }

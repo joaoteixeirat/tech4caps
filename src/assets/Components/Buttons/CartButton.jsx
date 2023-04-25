@@ -9,12 +9,6 @@ const CartButtonStyled = styled.div.attrs({role : 'button'})`
   font-size: 20px;
   cursor: pointer;
   z-index: 1;
-  transition: transform 0.4s ease;
-
-  &:hover{
-
-    transform: scale(1.1);
-  }
 `
 
 const CartButton = (props) => {
