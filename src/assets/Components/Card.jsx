@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
 
 const toAppear = keyframes`
 
@@ -7,26 +8,28 @@ const toAppear = keyframes`
   }
 `
 
-const StyledCard = styled.div`
+const StyledCard = styled(Link)`
 
+  text-decoration: none;
   width: 250px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding-bottom: 20px;
   gap: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: all 0.5s;
   animation: ${toAppear} 0.3s;
   animation-duration: ${props => props.$delay}ms;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
 
   &:hover{
-    transform: scale(1.02);
+    transform: translateY(-5px);
   };
 
   img{
@@ -38,27 +41,29 @@ const StyledCard = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     gap: 10px;
     font-size: 0.9rem;
-    color: white;
+    color: #333;
+    padding: 0 20px;
+    height: 100%;
 
     span{
 
-      font-size: 24px;
-      color: rgb(0, 159, 0);
-      font-weight: bold;
+      font-size: 16px;
+      color: #191919;
+      font-weight: 600;
     }
   }
 `
 
-const Card = ({ imageURL, title, price, delayToAppear }) => {
+const Card = ({ id, imageURL, title, price, delayToAppear }) => {
 
   return (
 
-    <StyledCard $delay={delayToAppear}>
+    <StyledCard $delay={delayToAppear} to={`/detalhes/${id}`}>
       
       <img src={imageURL} />
 

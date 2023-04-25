@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <Vitrine />
       },
       {
-        path: '/detalhes',
+        path: '/detalhes/:id',
         element: <Detalhes />
       }
     ]

@@ -194,6 +194,7 @@ function Vitrine() {
 
             <Card
               key={product.imagem}
+              id={product.id}
               imageURL={product.imagem}
               title={product.titulo}
               price={product.preco}
