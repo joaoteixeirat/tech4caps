@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import HeartButton from "../Components/Buttons/HeartButton";
-import BuyButton from "../Components/Buttons/BuyButton";
+import IconButton from "../Components/Buttons/IconButton";
+import CommonButton from "../Components/Buttons/CommonButton";
 
 const DetailsSection = styled.section`
 
@@ -145,8 +145,8 @@ function Detalhes() {
         <div className="color"></div>
 
         <div className="buttons-container">
-          <BuyButton />
-          <HeartButton $circle />
+          <CommonButton text={'Comprar'}/>
+          <IconButton variant={'heart'} $detail/>
         </div>
       </div>
 

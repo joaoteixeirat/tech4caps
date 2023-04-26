@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const BuyButtonStyled = styled.button`
+const StyledButton = styled.button`
 
   all: unset;
   background-color: green;
@@ -15,13 +15,14 @@ const BuyButtonStyled = styled.button`
   }
 `
 
-const BuyButton = (props) => {
+const CommonButton = ({text}) => {
 
-  return(
-    <BuyButtonStyled>
-      Comprar
-    </BuyButtonStyled>
+  return (
+
+    <StyledButton>
+      {text}
+    </StyledButton>
   )
 }
 
-export default BuyButton;
+export default CommonButton;

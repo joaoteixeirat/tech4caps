@@ -6,10 +6,7 @@ function Home() {
   return (
     
     <Banner>
-      <VitrineButton 
-        text={'vitrine →'} 
-        to={'/vitrine'}
-      />
+      <VitrineButton to={'/vitrine'} />
     </Banner>
   )
 }

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import HeartButton from './Buttons/HeartButton';
 import Link from './Link';
-import CartButton from './Buttons/CartButton';
+import IconButton from './Buttons/IconButton';
 
 const HeaderStyled = styled.header`
 
@@ -65,8 +64,8 @@ const Header = (props) => {
       <Title>tech4caps</Title>
 
       <ContainerButtons>
-        <HeartButton />
-        <CartButton />
+        <IconButton variant={'heart'}/>
+        <IconButton variant={'cart'}/>
       </ContainerButtons>
 
     </HeaderStyled>

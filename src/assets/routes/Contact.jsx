@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import CommonButton from "../Components/Buttons/CommonButton";
 
 const ContactSection = styled.section`
 
@@ -26,15 +27,6 @@ const ContactSection = styled.section`
       min-width: 400px;
       max-width: 400px;
     }
-
-    button{
-      all: unset;
-      padding: 10px 50px;
-      background-color: green;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
   }
 `
 
@@ -50,7 +42,7 @@ function Contact() {
         <input type="email" id="email" placeholder="example@email.com" />
         <textarea id="mensagem" rows={4} cols={30} placeholder="sua mensagem"/>
 
-        <button>enviar</button>
+        <CommonButton text={'enviar'} />
 
       </form>
 
