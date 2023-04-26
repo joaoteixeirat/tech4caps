@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import IconButton from "../Components/Buttons/IconButton";
 import CommonButton from "../Components/Buttons/CommonButton";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const DetailsSection = styled.section`
 
@@ -105,43 +107,53 @@ const DetailsSection = styled.section`
 
 function Detalhes() {
   
+  const { id } = useParams();
+
+  const [ produto, setProduto ] = useState({});
+
+  useEffect(() => {
+
+    fetch(`http://localhost:3000/produtos/${id}`)
+    .then(res => res.json())
+    .then(data => setProduto(data))
+
+  },[])
+
+  const { imagem, titulo, preco, descricao } = produto;
+
   return (
     
+    produto.imagem && 
     <DetailsSection>
 
       <div className="product-container">
         <div className="decription-of-product">
-          <p>
-            O boné aba curva com cordão e patch emborrachado de coqueiro, é o acessório certo para complementar seus visuais informais e descolados. O modelo além de oferece proteção ao rosto, garante um estilo jovial e esportivo
-          </p>
 
+          <p>{descricao.texto}</p>
           <ul>
-            <li>Boné masculino</li>
-            <li>Aba curva</li>
-            <li>06 panel</li>
-            <li>Patch emborrachado de coqueiro</li>
-            <li>Detalhe cordão trançado</li>
-            <li>Fechamento com velcro</li>
-            <li>Material Sustentável</li>
-            <li>Tecido: Algodã</li>
+            {
+              descricao.detalhes.map((detalhe) => <li key={detalhe}>{detalhe}</li>)
+            }
           </ul>
+
         </div>
+
         <div className="expand-details">
           <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <img src='https://img.lojasrenner.com.br/item/670277658/large/3.jpg'/>
+
+        <img src={imagem}/>
       </div>
 
       <div className="info-container">
-        <h1>
-          Boné Aba Curva Em Algodão Com Cordão E Patch De Coqueiro Branco
-        </h1>
+        <h1>{titulo}</h1>
+
         <p>
-          <strong>R$ 79,90</strong>
+          <strong>R$ {preco}</strong>
         </p>
-        <p>
-          Cor: Bege
-        </p>
+
+        <p> Cor: Bege </p>
+
         <div className="color"></div>
 
         <div className="buttons-container">
