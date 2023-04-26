@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
 
   text-decoration: none;
   color: white;
@@ -28,14 +29,14 @@ const StyledLink = styled.a`
   }
 `
 
-const Link = ({title, href}) => {
+const CustomLink = ({title, to}) => {
 
   return(
 
-    <StyledLink href={href}>
+    <StyledLink to={to}>
       {title}
     </StyledLink>
   )
 }
 
-export default Link;
+export default CustomLink;
