@@ -6,7 +6,7 @@ import App from './assets/routes/App'
 import Home from './assets/routes/Home'
 import Vitrine from './assets/routes/Vitrine'
 import Detalhes from './assets/routes/Detalhes'
-import Contact from './assets/routes/Contact'
+import Contato from './assets/routes/Contato'
 
 import './index.css'
 
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/contato',
-        element: <Contact />
+        element: <Contato />
       }
     ]
   }
