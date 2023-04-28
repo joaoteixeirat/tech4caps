@@ -48,6 +48,10 @@ const ContactSection = styled.section`
 
       font-size: 48px;
       margin-bottom: 20px;
+
+      i{
+        color: tomato;
+      }
     }
 
     section{
@@ -125,21 +129,17 @@ function Contato() {
     <ContactSection>
 
       <div>
-
-        <h1>Localização 📍</h1>
+        <h1>Localização <i className="fa-solid fa-map-location-dot"></i></h1>
         <p>Nosso endereço:</p>
         <p>R. Yeda, 595 - Tijuca, Teresópolis - RJ, 25975-560</p>
         <p>Telefone: (21) 97661-7097</p>
 
         <section>
-
           <a href="#"><i className="fa-brands fa-facebook"></i></a>
           <a href="#"><i className="fa-brands fa-instagram"></i></a>
           <a href="#"><i className="fa-brands fa-twitter"></i></a>
           <a href="#"><i className="fa-brands fa-whatsapp"></i></a>
-
         </section>
-
       </div>
 
       <form onSubmit={handleSubmit}>
