@@ -30,7 +30,7 @@ const DetailsSection = styled.section`
       left: 0;
     }
 
-    .expand-details{
+    span{
 
       background: rgba( 0, 0, 0, 0.35 );
       position: absolute;
@@ -45,16 +45,11 @@ const DetailsSection = styled.section`
       left: 0;
     }
 
-    &:hover > .expand-details{
+    &:hover > span{
 
       left: 100%;
     }
 
-  }
-
-  .product-container > img{
-
-    height: 80%;
   }
 
   .decription-of-product{
@@ -86,6 +81,10 @@ const DetailsSection = styled.section`
     align-items: start;
     gap: 30px;
     justify-self: start;
+
+    p{
+      font-weight: bold;
+    }
 
     .color{
 
@@ -128,31 +127,22 @@ function Detalhes() {
 
       <div className="product-container">
         <div className="decription-of-product">
-
           <p>{descricao.texto}</p>
           <ul>
             {
               descricao.detalhes.map((detalhe) => <li key={detalhe}>{detalhe}</li>)
             }
           </ul>
-
         </div>
-
-        <div className="expand-details">
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-
-        <img src={imagem}/>
+        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <img src={imagem} height={'80%'}/>
       </div>
 
       <div className="info-container">
         <h1>{titulo}</h1>
 
-        <p>
-          <strong>R$ {preco}</strong>
-        </p>
-
-        <p> Cor: Bege </p>
+        <p>R$ {preco}</p>
+        <p>Cor: Bege </p>
 
         <div className="color"></div>
 
