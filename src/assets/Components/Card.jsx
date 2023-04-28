@@ -63,7 +63,7 @@ const Card = ({ id, imageURL, title, price, delayToAppear }) => {
 
   return (
 
-    <StyledCard $delay={delayToAppear} to={`/detalhes/${id}`}>
+    <StyledCard $delay={delayToAppear} to={`/vitrine/detalhes/${id}`}>
       
       <img src={imageURL} />
 
