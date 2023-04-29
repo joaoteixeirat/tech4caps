@@ -71,7 +71,7 @@ const ContactSection = styled.section`
         transition: transform 0.3s ease;
         &:hover{
 
-          transform: translateY(-5px);
+          transform: translateY(-3px);
         }
       }
     }

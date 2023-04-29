@@ -9,8 +9,8 @@ const BannerStyled = styled.div`
   align-items: flex-end;
   justify-content: center;
   background-image: url('/banner.jpeg');
-  background-position: bottom;
-  background-size: auto 100%;
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
 `
 

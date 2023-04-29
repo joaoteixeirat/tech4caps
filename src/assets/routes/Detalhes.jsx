@@ -12,8 +12,8 @@ const DetailsSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
+  flex-wrap: wrap;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -76,11 +76,12 @@ const DetailsSection = styled.section`
     width: 30%;
     max-width: 410px;
     min-width: 220px;
+    padding-bottom: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 30px;
     justify-self: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
 
     p{
       font-weight: bold;
