@@ -3,6 +3,7 @@ import IconButton from "../Components/Buttons/IconButton";
 import CommonButton from "../Components/Buttons/CommonButton";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import QuantitySelect from "../Components/quantitySelect";
 
 const DetailsSection = styled.section`
 
@@ -89,14 +90,14 @@ const DetailsSection = styled.section`
 
     .color{
 
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       background-color: beige;
       border-radius: 50%;
       border: 2px solid darkgray;
     }
 
-    .buttons-container{
+    .buttons-container, .color-container, .quantity-container{
 
       display: flex;
       align-items: center;
@@ -141,11 +142,17 @@ function Detalhes() {
 
       <div className="info-container">
         <h1>{titulo}</h1>
-
         <p>R$ {preco}</p>
-        <p>Cor: Bege </p>
+        
+        <div className="color-container">
+          <p>Cor: Bege </p>
+          <span className="color"></span>
+        </div>
 
-        <div className="color"></div>
+        <div className="quantity-container">
+          <p>Qtd:</p>
+          <QuantitySelect min={1} max={5} />
+        </div>
 
         <div className="buttons-container">
           <CommonButton text={'Comprar'}/>
