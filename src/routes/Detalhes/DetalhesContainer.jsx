@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import IconButton from "../Components/Buttons/IconButton";
-import CommonButton from "../Components/Buttons/CommonButton";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import QuantitySelect from "../Components/quantitySelect";
 
-const DetailsSection = styled.section`
+const DetalhesContainer = styled.div`
 
   width: 100vw;
   height: calc(100vh - 100px);
@@ -106,62 +101,4 @@ const DetailsSection = styled.section`
   }
 `
 
-function Detalhes() {
-  
-  const { id } = useParams();
-
-  const [ produto, setProduto ] = useState({});
-
-  useEffect(() => {
-
-    fetch(`http://localhost:3000/produtos/${id}`)
-    .then(res => res.json())
-    .then(data => setProduto(data))
-
-  },[])
-
-  const { imagem, titulo, preco, descricao } = produto;
-
-  return (
-    
-    produto.imagem && 
-    <DetailsSection>
-
-      <div className="product-container">
-        <div className="decription-of-product">
-          <p>{descricao.texto}</p>
-          <ul>
-            {
-              descricao.detalhes.map((detalhe) => <li key={detalhe}>{detalhe}</li>)
-            }
-          </ul>
-        </div>
-        <span><i class="fa-solid fa-chevron-right"></i></span>
-        <img src={imagem} height={'80%'}/>
-      </div>
-
-      <div className="info-container">
-        <h1>{titulo}</h1>
-        <p>R$ {preco}</p>
-        
-        <div className="color-container">
-          <p>Cor: Bege </p>
-          <span className="color"></span>
-        </div>
-
-        <div className="quantity-container">
-          <p>Qtd:</p>
-          <QuantitySelect min={1} max={5} />
-        </div>
-
-        <div className="buttons-container">
-          <CommonButton text={'Comprar'}/>
-          <IconButton variant={'heart'} $detail/>
-        </div>
-      </div>
-
-    </DetailsSection>
-  )
-}
-
-export default Detalhes;
+export default DetalhesContainer;

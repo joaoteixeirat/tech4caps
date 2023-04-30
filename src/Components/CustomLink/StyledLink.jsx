@@ -29,14 +29,4 @@ const StyledLink = styled(Link)`
   }
 `
 
-const CustomLink = ({title, to}) => {
-
-  return(
-
-    <StyledLink to={to}>
-      {title}
-    </StyledLink>
-  )
-}
-
-export default CustomLink;
+export default StyledLink;

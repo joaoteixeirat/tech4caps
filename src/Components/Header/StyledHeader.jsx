@@ -1,9 +1,6 @@
 import styled from 'styled-components';
-import CustomLink from './CustomLink';
-import IconButton from './Buttons/IconButton';
-import { Link } from 'react-router-dom';
 
-const HeaderStyled = styled.header`
+const StyledHeader = styled.header`
 
   width: 100vw;
   height: 100px;
@@ -49,29 +46,4 @@ const HeaderStyled = styled.header`
   }
 `
 
-const Header = () => {
-
-  return (
-
-    <HeaderStyled>
-      <div>
-        <CustomLink to={'/vitrine'} title={'Vitrine'} />
-        <CustomLink to={'/contato'} title={'Contato'} />
-        <CustomLink to={'/sobre'} title={'Sobre'} />
-      </div>
-
-      <h1>
-        <Link to={'/'}>
-          tech4caps
-        </Link>
-      </h1>
-
-      <section>
-        <IconButton variant={'heart'} />
-        <IconButton variant={'cart'} />
-      </section>
-    </HeaderStyled>
-  );
-};
-
-export default Header;
+export default StyledHeader;

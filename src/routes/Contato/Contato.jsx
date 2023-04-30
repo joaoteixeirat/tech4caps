@@ -1,97 +1,7 @@
-import styled from "styled-components";
-import CommonButton from "../Components/Buttons/CommonButton";
 import { useState } from "react";
 
-const ContactSection = styled.section`
-
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100vw;
-  height: calc(100vh - 100px);
-  background-color: rgba(22, 21, 21, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap-reverse;
-  gap: 100px;
-  color: white;
-  overflow-y: auto;
-  padding: 50px;
-
-  &::-webkit-scrollbar{
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-track{
-
-    background: #747474;
-    border-radius: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb{
-
-    background: #eeeeee;
-    border-radius: 5px;
-  }
-
-  div, form, div > section{
-
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  div{
-
-    h1{
-
-      font-size: 48px;
-      margin-bottom: 20px;
-
-      i{
-        color: tomato;
-      }
-    }
-
-    section{
-
-      flex-direction: row;
-      font-size: 24px;
-      margin-top: 20px;
-
-      a{
-
-        all: unset;
-      }
-
-      i{
-
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        &:hover{
-
-          transform: translateY(-3px);
-        }
-      }
-    }
-
-  }
-
-  form{
-
-    p{
-      align-self: start;
-    }
-    
-    input, textarea{
-
-      padding: 10px;
-      min-width: 300px;
-      max-width: 400px;
-    }
-  }
-`
+import ContatoContainer from "./ContatoContainer";
+import CommonButton from "../../Components/Buttons/CommonButton";
 
 function Contato() {
   
@@ -126,8 +36,7 @@ function Contato() {
 
   return (
     
-    <ContactSection>
-
+    <ContatoContainer>
       <div>
         <h1>Localização <i className="fa-solid fa-map-location-dot"></i></h1>
         <p>Nosso endereço:</p>
@@ -145,6 +54,7 @@ function Contato() {
       <form onSubmit={handleSubmit}>
 
         <p>Formulário de contato</p>
+
         <input 
           type="text" 
           id="nome" 
@@ -172,8 +82,7 @@ function Contato() {
         <CommonButton text={'enviar'} />
 
       </form>
-
-    </ContactSection>
+    </ContatoContainer>
   )
 }
 

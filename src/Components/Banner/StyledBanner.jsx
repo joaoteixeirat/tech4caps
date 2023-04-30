@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const BannerStyled = styled.div`
+const StyledBanner = styled.div`
 
   width: 100vw;
   height: calc(100vh - 100px);
@@ -14,14 +14,4 @@ const BannerStyled = styled.div`
   background-repeat: no-repeat;
 `
 
-const Banner = ({children}) => {
-
-  return(
-
-    <BannerStyled>
-      {children}
-    </BannerStyled>
-  )
-}
-
-export default Banner;
+export default StyledBanner;

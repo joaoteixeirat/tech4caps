@@ -2,14 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import App from './assets/routes/App'
-import Home from './assets/routes/Home'
-import Vitrine from './assets/routes/Vitrine'
-import Detalhes from './assets/routes/Detalhes'
-import Contato from './assets/routes/Contato'
-import Sobre from './assets/routes/Sobre'
-
-import './index.css'
+import App from './App'
+import Home from './routes/Home/Home'
+import Vitrine from './routes/Vitrine/Vitrine'
+import Detalhes from './routes/Detalhes/Detalhes'
+import Contato from './routes/Contato/Contato'
+import Sobre from './routes/Sobre/Sobre'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
