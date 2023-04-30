@@ -1,40 +1,48 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import VitrineContainer from "./VitrineContainer";
+import Carregando from "../../Components/Carregando/Carregando";
 import Card from "../../Components/Card/Card";
 
-function Vitrine() {
+class Vitrine extends React.Component {
     
-  const [produtos, setProdutos] = useState([]);
+  constructor(props){
 
-  useEffect(() => {
+    super(props);
+    this.state = { produtos : [], carregando : true };
+  };
+
+  componentDidMount(){
 
     fetch('http://localhost:3000/produtos')
     .then(res => res.json())
-    .then(data => setProdutos(data))
+    .then(data => this.setState({ produtos: data, carregando: false }))
+  };
 
-  },[])
+  render(){
 
-  return (
-  
-    <VitrineContainer>
-      { produtos.length ?
-        produtos.map(({id, imagem, titulo, preco},index) => (
+    const { produtos, carregando } = this.state;
 
-          <Card
-            key={imagem}
-            id={id}
-            imageURL={imagem}
-            title={titulo}
-            price={preco}
-            delayToAppear={(index + 1) * 120}
-          />
-        ))
-        :
-        <h1>Carregando...</h1>
-      }
-    </VitrineContainer>
-  )
-}
+    return (
+      <VitrineContainer>
+        { 
+          carregando ? <Carregando /> :
+          produtos.map(
+            ({id, imagem, titulo, preco},index) => (
+              <Card
+                key={imagem}
+                id={id}
+                imageURL={imagem}
+                title={titulo}
+                price={preco}
+                delayToAppear={(index + 1) * 120}
+              />
+            )
+          )
+        }
+      </VitrineContainer>
+    );
+  };
+};
 
 export default Vitrine;
