@@ -8,6 +8,7 @@ import Vitrine from './routes/Vitrine/Vitrine'
 import Detalhes from './routes/Detalhes/Detalhes'
 import Contato from './routes/Contato/Contato'
 import Sobre from './routes/Sobre/Sobre'
+import Admin from './routes/Admin/Admin'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/vitrine'>
             <Route path='/vitrine/detalhes/:id' element={<Detalhes />} />
           </Route>
+          <Route path='/admin' element={<Admin />} />
         </Route>
       </Routes>
     </BrowserRouter>
