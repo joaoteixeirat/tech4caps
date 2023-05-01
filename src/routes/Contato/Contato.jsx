@@ -21,7 +21,7 @@ function Contato() {
       mensagem: mensagem
     });
 
-    const API_URL = 'http://localhost:3000/mensagens';
+    const API_URL = 'https://644f06e0b61a9f0c4d1b1e80.mockapi.io/mensagens';
 
     const config = {
       method: "POST",

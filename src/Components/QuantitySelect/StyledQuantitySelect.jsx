@@ -26,7 +26,7 @@ const StyledQuantitySelect = styled.div`
     all: unset;
     padding: 5px 10px;
     font-size: 16px;
-    width: 10px;
+    width: 20px;
     text-align: center;
   }
 `

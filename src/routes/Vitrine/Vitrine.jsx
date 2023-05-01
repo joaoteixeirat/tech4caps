@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import VitrineContainer from "./VitrineContainer";
 import Carregando from "../../Components/Carregando/Carregando";
@@ -14,7 +14,7 @@ class Vitrine extends React.Component {
 
   componentDidMount(){
 
-    fetch('http://localhost:3000/produtos')
+    fetch('https://644f06e0b61a9f0c4d1b1e80.mockapi.io/produtos')
     .then(res => res.json())
     .then(data => this.setState({ produtos: data, carregando: false }))
   };

@@ -12,11 +12,11 @@ function Detalhes() {
 
   const [ produto, setProduto ] = useState({});
 
-  const { imagem, titulo, preco, descricao } = produto;
+  const { imagem, titulo, color, cor, preco, estoque, descricao } = produto;
 
   useEffect(() => {
 
-    fetch(`http://localhost:3000/produtos/${id}`)
+    fetch(`https://644f06e0b61a9f0c4d1b1e80.mockapi.io/produtos/${id}`)
     .then(res => res.json())
     .then(data => setProduto(data))
 
@@ -43,13 +43,13 @@ function Detalhes() {
         <p>R$ {preco}</p>
         
         <div className="color-container">
-          <p>Cor: Bege </p>
-          <span className="color"></span>
+          <p>Cor: {cor} </p>
+          <span className="color" style={{backgroundColor: color}}></span>
         </div>
 
         <div className="quantity-container">
           <p>Qtd:</p>
-          <QuantitySelect min={1} max={5} />
+          <QuantitySelect min={1} max={estoque} />
         </div>
 
         <div className="buttons-container">
