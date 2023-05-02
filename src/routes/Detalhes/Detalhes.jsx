@@ -34,7 +34,7 @@ function Detalhes() {
           </ul>
         </div>
 
-        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <span><i className="fa-solid fa-chevron-right"></i></span>
         <img src={imagem} height={'80%'}/>
       </div>
 
