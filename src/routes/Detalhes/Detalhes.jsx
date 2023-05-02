@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import DetalhesContainer from "./DetalhesContainer";
-import IconButton from "../../Components/Buttons/IconButton";
+import HeartButton from "../../Components/Buttons/HeartButton";
 import CommonButton from "../../Components/Buttons/CommonButton";
 import QuantitySelect from "../../Components/QuantitySelect/QuantitySelect";
 
@@ -54,7 +54,7 @@ function Detalhes() {
 
         <div className="buttons-container">
           <CommonButton text={'Comprar'}/>
-          <IconButton variant={'heart'} $detail/>
+          <HeartButton />
         </div>
       </div>
     </DetalhesContainer>
