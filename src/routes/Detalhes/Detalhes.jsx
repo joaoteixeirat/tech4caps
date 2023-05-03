@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import DetalhesContainer from "./DetalhesContainer";
-import HeartButton from "../../Components/Buttons/HeartButton";
-import CommonButton from "../../Components/Buttons/CommonButton";
-import QuantitySelect from "../../Components/QuantitySelect/QuantitySelect";
+import BotaoDeCoracao from "../../Components/Botoes/BotaoDeCoracao";
+import BotaoPadrao from "../../Components/Botoes/BotaoPadrao";
+import SeletorDeQuantidade from "../../Components/SeletorDeQuantidade/SeletorDeQuantidade";
 
 function Detalhes() {
   
@@ -26,8 +26,8 @@ function Detalhes() {
     
     produto.imagem && 
     <DetalhesContainer>
-      <div className="product-container">
-        <div className="decription-of-product">
+      <div className="container-produto">
+        <div className="descricao-produto">
           <p>{descricao.texto}</p>
           <ul>
             { descricao.detalhes.map((detalhe) => <li key={detalhe}>{detalhe}</li>) }
@@ -47,14 +47,14 @@ function Detalhes() {
           <span className="color" style={{backgroundColor: color}}></span>
         </div>
 
-        <div className="quantity-container">
+        <div className="container-quantidade">
           <p>Qtd:</p>
-          <QuantitySelect min={1} max={estoque} />
+          <SeletorDeQuantidade min={1} max={estoque} />
         </div>
 
-        <div className="buttons-container">
-          <CommonButton text={'Comprar'}/>
-          <HeartButton />
+        <div className="container-botoes">
+          <BotaoPadrao texto={'Comprar'}/>
+          <BotaoDeCoracao />
         </div>
       </div>
     </DetalhesContainer>

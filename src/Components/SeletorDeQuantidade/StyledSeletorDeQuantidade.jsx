@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledQuantitySelect = styled.div`
+const StyledSeletorDeQuantidade = styled.div`
 
   display: flex;
   gap: 5px;
@@ -31,4 +31,4 @@ const StyledQuantitySelect = styled.div`
   }
 `
 
-export default StyledQuantitySelect;
+export default StyledSeletorDeQuantidade;

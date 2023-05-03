@@ -31,7 +31,7 @@ const SobreContainer = styled.div`
     border-radius: 5px;
   }
 
-  .profile{
+  .foto-de-perfil{
 
     min-width: 350px;
     aspect-ratio: 1;
@@ -41,7 +41,7 @@ const SobreContainer = styled.div`
     border-radius: 50%;
   }
 
-  .description{
+  .descricao{
 
     width: 60%;
     max-width: 800px;
@@ -49,7 +49,7 @@ const SobreContainer = styled.div`
     line-height: 25px;
   }
 
-  .learned-techs{
+  .tecnologias-aprendidas{
 
     width: 100%;
     display: flex;

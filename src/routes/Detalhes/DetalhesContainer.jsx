@@ -13,7 +13,7 @@ const DetalhesContainer = styled.div`
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-  .product-container{
+  .container-produto{
     
     height: inherit;
     display: flex;
@@ -21,7 +21,7 @@ const DetalhesContainer = styled.div`
     position: relative;
     overflow: hidden;
 
-    &:hover > .decription-of-product{
+    &:hover > .descricao-produto{
 
       left: 0;
     }
@@ -48,7 +48,7 @@ const DetalhesContainer = styled.div`
 
   }
 
-  .decription-of-product{
+  .descricao-produto{
     
     width: 100%;
     background: rgba( 255, 255, 255, 0.35 );
@@ -92,7 +92,7 @@ const DetalhesContainer = styled.div`
       border: 2px solid darkgray;
     }
 
-    .buttons-container, .color-container, .quantity-container{
+    .container-botoes, .color-container, .container-quantidade{
 
       display: flex;
       align-items: center;

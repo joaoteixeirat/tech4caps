@@ -32,10 +32,10 @@ class Vitrine extends React.Component {
               <Card
                 key={imagem}
                 id={id}
-                imageURL={imagem}
-                title={titulo}
-                price={preco}
-                delayToAppear={(index + 1) * 120}
+                urlDaImagem={imagem}
+                titulo={titulo}
+                preco={preco}
+                delayDeAparicao={(index + 1) * 120}
               />
             )
           )

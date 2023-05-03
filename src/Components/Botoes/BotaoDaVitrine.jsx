@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
-const StyledButton = styled.button`
+const StyledBotao = styled.button`
 
   all: unset;
   width: 200px;
@@ -46,16 +46,16 @@ const StyledButton = styled.button`
   }
 `
 
-const VitrineButton = ({ to }) => {
+const BotaoDaVitrine = ({ to }) => {
 
   return (
 
-    <StyledButton>
+    <StyledBotao>
       <Link to={to}>
         <span>vitrine →</span>
       </Link>
-    </StyledButton>
+    </StyledBotao>
   );
 };
 
-export default VitrineButton;
+export default BotaoDaVitrine;

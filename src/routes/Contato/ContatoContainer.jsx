@@ -31,7 +31,7 @@ const ContatoContainer = styled.div`
     border-radius: 5px;
   }
 
-  .info-adress, .info-adress > section, form{
+  .info-endereco, .info-endereco > section, form{
 
     display: flex;
     align-items: start;
@@ -40,7 +40,7 @@ const ContatoContainer = styled.div`
     gap: 15px;
   }
 
-  .info-adress > h1 {
+  .info-endereco > h1 {
 
     font-size: 48px;
     margin-bottom: 20px;
@@ -50,7 +50,7 @@ const ContatoContainer = styled.div`
     }
   }
 
-  .info-adress > section{
+  .info-endereco > section{
 
     flex-direction: row;
     font-size: 24px;

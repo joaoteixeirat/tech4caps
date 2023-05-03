@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import ContatoContainer from "./ContatoContainer";
-import CommonButton from "../../Components/Buttons/CommonButton";
+import BotaoPadrao from "../../Components/Botoes/BotaoPadrao";
 import Alerta from "../../Components/Alerta/Alerta";
 
 function Contato() {
@@ -71,7 +71,7 @@ function Contato() {
         variante={varianteDoAlerta}
       />
 
-      <div className="info-adress">
+      <div className="info-endereco">
         <h1>Localização <i className="fa-solid fa-map-location-dot"></i></h1>
         <p>Nosso endereço:</p>
         <p>R. Yeda, 595 - Tijuca, Teresópolis - RJ, 25975-560</p>
@@ -113,7 +113,7 @@ function Contato() {
           onChange={handleStates(setMensagem)} 
         />
 
-        <CommonButton text={'enviar'} />
+        <BotaoPadrao texto={'enviar'} />
 
       </form>
     </ContatoContainer>

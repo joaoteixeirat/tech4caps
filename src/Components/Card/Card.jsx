@@ -1,17 +1,15 @@
 import StyledCard from "./StyledCard";
 
-const Card = ({ id, imageURL, title, price, delayToAppear }) => {
+const Card = ({ id, urlDaImagem, titulo, preco, delayDeAparicao }) => {
 
   return (
-    <StyledCard 
-      $delay={delayToAppear} 
-      to={`/vitrine/detalhes/${id}`}>
+    <StyledCard $delay={delayDeAparicao} to={`/vitrine/detalhes/${id}`}>
 
-      <img src={imageURL} />
+      <img src={urlDaImagem} />
 
       <section>
-        <p>{title}</p>
-        <span>R$ {price}</span>
+        <p>{titulo}</p>
+        <span>R$ {preco}</span>
       </section>
 
     </StyledCard>

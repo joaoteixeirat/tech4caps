@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledHeartButton = styled.button`
+const StyledBotao = styled.button`
 
   all: unset;
   width: 30px;
@@ -18,13 +18,13 @@ const StyledHeartButton = styled.button`
   }
 `
 
-const HeartButton = () => {
+const BotaoDeCoracao = () => {
 
   return (
-    <StyledHeartButton>
+    <StyledBotao>
       <i className="fa-solid fa-heart"></i>
-    </StyledHeartButton>
+    </StyledBotao>
   );
 }
 
-export default HeartButton;
+export default BotaoDeCoracao;

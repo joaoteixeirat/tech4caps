@@ -1,11 +1,11 @@
 import Banner from "../../Components/Banner/Banner"
-import VitrineButton from "../../Components/Buttons/VitrineButton"
+import BotaoDaVitrine from "../../Components/Botoes/BotaoDaVitrine"
 
 function Home() {
   
   return (
     <Banner>
-      <VitrineButton to={'/vitrine'} />
+      <BotaoDaVitrine to={'/vitrine'} />
     </Banner>
   )
 }

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const StyledButton = styled.button`
+const StyledBotao = styled.button`
 
   all: unset;
   background-color: green;
@@ -15,14 +15,14 @@ const StyledButton = styled.button`
   }
 `
 
-const CommonButton = ({text}) => {
+const BotaoPadrao = ({texto}) => {
 
   return (
 
-    <StyledButton>
-      {text}
-    </StyledButton>
+    <StyledBotao>
+      {texto}
+    </StyledBotao>
   )
 }
 
-export default CommonButton;
+export default BotaoPadrao;

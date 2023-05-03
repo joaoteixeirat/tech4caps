@@ -5,8 +5,8 @@ function Sobre() {
   return (
     
     <SobreContainer>
-      <div className="profile"></div>
-      <div className="description">
+      <div className="foto-de-perfil"></div>
+      <div className="descricao">
         <p>
           Essa é a Tech4caps, a loja de bonés mais irada da América Latina, criada por mim usando tudo o que aprendi durante essa jornada de seis meses no Projeto Galileo. 
           Meu objetivo era deixar o site o mais moderno e elegante possível, e para isso, utilizei a biblioteca React, que facilitou muito o processo. 
@@ -17,7 +17,7 @@ function Sobre() {
         </p>
       </div>
 
-      <div className="learned-techs">
+      <div className="tecnologias-aprendidas">
         <img src="/icons/html5.png" />
         <img src="/icons/css3.svg" />
         <img src="/icons/javascript.svg" />
