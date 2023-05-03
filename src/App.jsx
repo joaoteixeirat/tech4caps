@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom"
-import { createGlobalStyle } from "styled-components";
+import { injectGlobal } from "@emotion/css";
 
 import Header from "./Components/Header/Header"
 
-const GlobalStyle = createGlobalStyle`
+injectGlobal`
   *{
     padding: 0;
     margin: 0;
@@ -19,7 +19,6 @@ function App(){
 
   return(
     <>
-      <GlobalStyle />
       <Header />
       <Outlet />
     </>
