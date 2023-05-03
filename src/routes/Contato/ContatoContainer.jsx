@@ -31,7 +31,7 @@ const ContatoContainer = styled.div`
     border-radius: 5px;
   }
 
-  div, form, div > section{
+  .info-adress, .info-adress > section, form{
 
     display: flex;
     align-items: start;
@@ -40,40 +40,36 @@ const ContatoContainer = styled.div`
     gap: 15px;
   }
 
-  div{
+  .info-adress > h1 {
 
-    h1{
+    font-size: 48px;
+    margin-bottom: 20px;
 
-      font-size: 48px;
-      margin-bottom: 20px;
+    i{
+      color: tomato;
+    }
+  }
 
-      i{
-        color: tomato;
-      }
+  .info-adress > section{
+
+    flex-direction: row;
+    font-size: 24px;
+    margin-top: 20px;
+
+    a{
+
+      all: unset;
     }
 
-    section{
+    i{
 
-      flex-direction: row;
-      font-size: 24px;
-      margin-top: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:hover{
 
-      a{
-
-        all: unset;
-      }
-
-      i{
-
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        &:hover{
-
-          transform: translateY(-3px);
-        }
+        transform: translateY(-3px);
       }
     }
-
   }
 
   form{

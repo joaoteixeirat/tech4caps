@@ -1,19 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ContatoContainer from "./ContatoContainer";
 import CommonButton from "../../Components/Buttons/CommonButton";
+import Alerta from "../../Components/Alerta/Alerta";
 
 function Contato() {
   
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [mensagem, setMensagem] = useState('');
+  const [ nome, setNome ] = useState('');
+  const [ email, setEmail ] = useState('');
+  const [ mensagem, setMensagem ] = useState('');
+  const [ mostrarAlerta, setMostrarAlerta ] = useState(false);
+  const [ varianteDoAlerta, setVarianteDoAlerta ] = useState('sucesso');
 
   const handleStates = (handleState) => ({target}) => handleState(target.value);
+
+  useEffect(() => {
+
+    if (!mostrarAlerta) return;
+
+    const timeout = setTimeout(() => {
+
+      setMostrarAlerta(false);
+      
+    },2000);
+
+    return () => { clearTimeout(timeout) };
+
+  },[mostrarAlerta])
 
   const handleSubmit = (event) => {
 
     event.preventDefault();
+
+    if(!nome || !email || !mensagem) {
+
+      setVarianteDoAlerta('erro');
+      setMostrarAlerta(true);
+      return;
+    }
 
     const data = JSON.stringify({
       nome: nome,
@@ -31,13 +55,23 @@ function Contato() {
 
     fetch(API_URL,config)
     .then(res => res.status)
-    .then(status => alert(status))
+    .then(() => {
+
+      setVarianteDoAlerta('sucesso');
+      setMostrarAlerta(true);
+    });
   }
 
   return (
     
     <ContatoContainer>
-      <div>
+
+      <Alerta 
+        visivel={mostrarAlerta} 
+        variante={varianteDoAlerta}
+      />
+
+      <div className="info-adress">
         <h1>Localização <i className="fa-solid fa-map-location-dot"></i></h1>
         <p>Nosso endereço:</p>
         <p>R. Yeda, 595 - Tijuca, Teresópolis - RJ, 25975-560</p>
