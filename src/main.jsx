@@ -9,6 +9,7 @@ import Detalhes from './routes/Detalhes/Detalhes'
 import Contato from './routes/Contato/Contato'
 import Sobre from './routes/Sobre/Sobre'
 import Admin from './routes/Admin/Admin'
+import Erro from './routes/Erro/Erro'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/vitrine/detalhes/:id' element={<Detalhes />} />
           </Route>
           <Route path='/admin' element={<Admin />} />
+          <Route path='*' element={<Erro />} />
         </Route>
       </Routes>
     </BrowserRouter>

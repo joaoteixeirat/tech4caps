@@ -16,7 +16,7 @@ const StyledNavbar = styled.nav`
   z-index: 5;
   top: 0;
   left: ${props => props.ativa ? 0 : -130}px;
-  transition: left 0.5s ease;
+  transition: all 0.5s ease;
 
   & > span{
 
